@@ -1,16 +1,41 @@
 # StringDotLevenshtein
-Levenstein algorithm helps calculate the distance between two words.
-You can make a spell checker using this algorighm.
 
-This gem attempts to solve this fast, but at the expense of disallowing big string.
+![Preview](https://github.com/Souravgoswami/string_dot_levenshtein/blob/master/preview/preview.webp)
+
+Levenstein algorithm helps calculate the distance between two words.
+You can make a spell checker using this algorithm.
+
+This gem attempts to solve this fast but at the expense of disallowing big string.
 
 Any string more than 4096 characters will raise RuntimeError.
 
 The main focus of this gem is to hunt for big dictionaries, that have short (< 4096 characters)
 but hundreds of thousands of words.
 
-Do note that emojis will not work, and it will make it ouput some weird results, like +4 if the
+Do note that emojis will not work, and it will make it output some weird results, like +4 if the
 emoji is 4 bytes, +3 bytes if it's 3 bytes, etc.
+
+## Dependencies (Build)
+
+You need to have the C compiler installed to be able to compile the C extension. On Arch Linux:
+
+```
+# pacman -S gcc make
+```
+
+On Debian based systems:
+
+```
+# apt install gcc build-essential
+```
+
+You might also require `ruby-dev` in Debian based systems which provides support for ruby.h header file:
+
+```
+# apt install ruby-dev
+```
+
+Once your are done, and you can compile the C file, you can follow the installation!
 
 ## Installation
 
@@ -59,4 +84,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/Sourav
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open-source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
