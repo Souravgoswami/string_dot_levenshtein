@@ -41,8 +41,8 @@ VALUE levenshtein(VALUE obj, VALUE arg) {
 				left = ary_i[j_1] ;
 
 				min = diag ;
-				if (up < diag) min = up ;
-				if (left < diag) min = left ;
+				if (up < min) min = up ;
+				if (left < min) min = left ;
 
 				ary_i[j] = min + 1 ;
 			}
