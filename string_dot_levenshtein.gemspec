@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
 	s.description = s.summary
 	s.homepage = "https://github.com/Souravgoswami/string_dot_levenshtein"
 	s.license = "MIT"
-	s.required_ruby_version = Gem::Requirement.new(">= 1.9.3")
+	s.required_ruby_version = Gem::Requirement.new(">= 2.0.0")
 	s.files = Dir.glob(%w(ext/**/*.{rb,c} lib/**/*.rb))
 	s.extensions = Dir.glob(%w(ext/**/*.rb))
 	s.bindir = "exe"
