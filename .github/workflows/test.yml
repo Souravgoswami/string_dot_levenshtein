@@ -26,5 +26,9 @@ jobs:
       run: bundle install
     - name: Install gem
       run: rake install
-    - name: Run tests
+    - name: Run tests 1
+      run: rake test
+    - name: Run tests 2
+      run: rake test
+    - name: Run tests 3
       run: rake test
